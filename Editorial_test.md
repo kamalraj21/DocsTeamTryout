@@ -19,49 +19,41 @@ search for hotels.
 
 # Generic Setup
 
-This will introduce you to the general setup for Couchbase Travel using SDKs.
+This will introduce you to the generic setup for Couchbase Travel using SDKs.
 
 ## Prerequisite
 
 Following are the requirements for a generic setup:
-* Your favorite editor or EID//KR: Expand EID.
+* Your favorite editor or EID.  <!---
+Before introducing an acronym use the full form
+--> 
 * Your SDK of choice and its specific dependencies.
 * A local Couchbase 4.5 (or greater) installation. 
- Note: Ensure that the travel-sample bucket has been loaded from 4.5 and that there is, at
-least, one node with data, query, index, and full text search services
-in the cluster.)// additional information can be added as Note.
-
+ Note: Ensure that the travel-sample bucket has been loaded from 4.5 and that there is, at least, one node with data, query, index, and full text search services in the cluster.) 
+ 
 # Getting Started
+To start, it is easiest if you run Couchbase Server and the travel sample app on the same machine. This is optional and advanced MDS configurations are supported. 
 
-It is simpler to start a development environment with components running locally.
+## Downloading Couchbase Server
 
-To start, it is easiest if you run Couchbase Server and the travel
-sample app on the same machine. This is optional and advanced MDS configurations 
-are supported. 
+Download [Couchbase Server 4.6](https://www.couchbase.com/downloads) and install it.
 
-Download [Couchbase Server 4.6](https://www.couchbase.com/downloads)
-and install it.
+Follow the download instructions and setup wizard and select all the services (`data`, `query`, and `index`).
 
-Follow the download instructions and setup wizard and select all the services (`data`, `query`, and
-`index`).
-
-Install the sample bucket named `travel-sample` (introduced in Couchbase Server 4.0) because it
-contains the data used in this tutorial.
+Install the sample bucket named `travel-sample` (introduced in Couchbase Server 4.0) because it contains the data used in this tutorial.
 
 ![](assets/cb-server-services.png)
 
 ![](assets/cb-server-travel-sample.png)
 
-If you already have Couchbase Server 4.5 or later installed but did
-not install the `travel-sample` bucket (or you installed it from a
-4.0 version), do the following
+For the following scenarios:
+*If you already have Couchbase Server 4.5 or later versions installed, but did not install the `travel-sample` bucket 
+(or you installed it from a 4.0 version), then do the following:
 
 1. Open Couchbase Web Console and select **Settings >
 Sample Buckets**.
 2. Select `travel-sample` and then click Create.
-
-A notification box in the upper-right corner disappears when
-the bucket is ready to use.
+A notification box in the upper-right corner disappears when the bucket is ready to use.
 
 # Creating Hotel Index
 To enable search for `hotels`, an FTS index
@@ -72,5 +64,4 @@ index:
 
 ![](./assets/travel-app-fts-index.png)
 
-Note: The index mapping could be better tuned, but a generic
-mapping will also work fine for this example.
+Note: The index mapping could be better tuned, but a generic mapping will also work fine for this example.
